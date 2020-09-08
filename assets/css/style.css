@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #212529;
+  height: auto;
 }
 
 a {
@@ -593,13 +594,25 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+@media (max-width: 767px) {
+  #hero {
+    width: 100%;
+    height: 100vh !important;
+  }
+}
 
 #services,
+#faq,
+#portfolio #team,
+#clients {
+  width: 100%;
+  height: 100% !important;
+}
+
 #about {
   width: 100%;
   height: 100vh;
 }
-
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -639,6 +652,40 @@ section {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
+}
+
+.list-box {
+  padding: 20px;
+  margin: 0 0 40px 0;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+
+  border-radius: 15px;
+  /* border-bottom: 3px solid #fff; */
+  background: #fff;
+  transform: translateY(-5px);
+  border-color: #ef7f4d;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center !important;
+  border-width: 80px;
+  border-bottom: 2px solid #ef7f4d;
+}
+
+.content {
+  font-size: 18px;
+  text-align: center !important;
+  border-width: 80px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.content > p {
+  margin: 2px auto;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
