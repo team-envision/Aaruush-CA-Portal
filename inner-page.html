@@ -112,7 +112,7 @@
       style="display: flex; background-color: white; height: 100vh"
     >
       <div
-        class="container"
+        class="container horizontal-scrollable"
         style="margin: -50px auto 50px auto; padding-top: 80px"
       >
         <div class="section-title" data-aos="fade-up">
@@ -127,7 +127,7 @@
             data-aos-delay="100"
           >
             <div class="list-box col-12" style="background-color: #fef5f1">
-              <div
+              <!-- <div
                 class="row header col-12"
                 style="margin: auto; display: flex"
               >
@@ -146,10 +146,46 @@
                 <div class="col-3 head">
                   <p>Tasks/ Points</p>
                 </div>
-              </div>
+              </div> -->
               <!--Values-->
 
-              <div id="demo"></div>
+              <!-- <div id="demo"></div> -->
+
+              <div class="container text-center my-4">
+                <!-- <p class="font-weight-bold">
+                  The data in the table comes from the google spreadsheet
+                </p>
+          
+                <a
+                  class="btn btn-primary mb-4"
+                  href="https://docs.google.com/spreadsheets/d/1t2_HHLkibAybPORmXuDDEFEyetC3p7r1blQRpjzinXg/edit?usp=sharing"
+                  role="button"
+                  target="_blank"
+                  >Click to see the source sheet</a
+                > -->
+
+                <!-- Table  -->
+                <table
+                  class="table table bordered table-striped"
+                  id="testTable"
+                >
+                  <!-- Table head -->
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Name</th>
+                      <th>E-mail</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <!-- Table head -->
+
+                  <!-- Table body -->
+                  <tbody id="demo"></tbody>
+                  <!-- Table body -->
+                </table>
+                <!-- Table  -->
+              </div>
             </div>
             <!-- <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
@@ -232,16 +268,33 @@
             var age = data.feed.entry[i]["gsx$_cokwr"]["$t"];
             var email = data.feed.entry[i]["gsx$_cpzh4"]["$t"];
 
+            // document.getElementById("demo").innerHTML +=
+            //   '<div class="row col-12" style="margin: auto; display: flex"><div class="col-3 content"><p>' +
+            //   (i + 1) +
+            //   '</p></div><div class="col-3 content"><p>' +
+            //   name +
+            //   '</p></div><div class="col-3 content"><p>' +
+            //   email +
+            //   '</p></div><div class="col-3 content"><p>' +
+            //   age +
+            //   "</p></div></div>";
+
             document.getElementById("demo").innerHTML +=
-              '<div class="row col-12" style="margin: auto; display: flex"><div class="col-3 content"><p>' +
+              "<tr>" +
+              "<td>" +
               (i + 1) +
-              '</p></div><div class="col-3 content"><p>' +
+              "</td>" +
+              "<td>" +
               name +
-              '</p></div><div class="col-3 content"><p>' +
+              "</td>" +
+              "<td>" +
               email +
-              '</p></div><div class="col-3 content"><p>' +
+              "</td>" +
+              "</td>" +
+              "<td>" +
               age +
-              "</p></div></div>";
+              "</td>" +
+              "</tr>";
           }
         }
       );

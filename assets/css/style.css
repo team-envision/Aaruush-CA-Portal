@@ -18,6 +18,18 @@ a {
   color: #eb5d1e;
 }
 
+/* The heart of the matter */
+
+.horizontal-scrollable > .row {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.horizontal-scrollable > .row > .col-xs-4 {
+  display: inline-block;
+  float: none;
+}
+
 a:hover {
   color: #ef7f4d;
   text-decoration: none;
