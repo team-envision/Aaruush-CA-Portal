@@ -142,7 +142,7 @@ h6,
 .nav-menu a {
   display: block;
   position: relative;
-  color: #4e4039;
+  color: #263238;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 15px;
@@ -258,7 +258,7 @@ h6,
   left: -260px;
   width: 260px;
   padding-top: 18px;
-  background: #4e4039;
+  background: #263238;
   transition: 0.4s;
 }
 
@@ -381,7 +381,7 @@ h6,
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #4e4039;
+  color: #263238;
 }
 
 #hero h2 {
@@ -504,7 +504,7 @@ section {
   position: relative;
   font-size: 32px;
   font-weight: 700;
-  color: #4e4039;
+  color: #263238;
 }
 
 .section-title p::after {
@@ -570,7 +570,7 @@ section {
 .about h3 {
   font-weight: 700;
   font-size: 34px;
-  color: #4e4039;
+  color: #263238;
 }
 
 .about h4 {
@@ -1321,7 +1321,7 @@ section {
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #4e4039;
+  color: #263238;
 }
 
 #footer .footer-newsletter form {
