@@ -133,7 +133,7 @@
         <table
           class="table list-box bordered table-striped"
           id="testTable"
-          style="background-color: "
+          style="background-color: none"
         >
           <!-- Table head -->
           <thead>
@@ -272,15 +272,16 @@
 
     <script type="text/javascript">
       $.getJSON(
-        "https://spreadsheets.google.com/feeds/list/1c9UTIqn2IjqCmfVmJgtw1QUx5aUzRPn3933OHQgDChk/od6/public/values?alt=json",
+        "https://spreadsheets.google.com/feeds/list/1kXBswcjCFHkxM71ktIsUXL9_HslGFcv0v8KUN1viQQM/od6/public/values?alt=json",
         function (data) {
           var sheetData = data.feed.entry;
 
           var i;
           for (i = 0; i < sheetData.length; i++) {
-            var name = data.feed.entry[i]["gsx$_cn6ca"]["$t"];
-            var age = data.feed.entry[i]["gsx$_cokwr"]["$t"];
-            var email = data.feed.entry[i]["gsx$_cpzh4"]["$t"];
+            var rank = data.feed.entry[i]["gsx$rank"]["$t"];
+            var name = data.feed.entry[i]["gsx$name"]["$t"];
+            var caid = data.feed.entry[i]["gsx$caid"]["$t"];
+            var totalpoints = data.feed.entry[i]["gsx$totalpoints"]["$t"];
 
             // document.getElementById("demo").innerHTML +=
             //   '<div class="row col-12" style="margin: auto; display: flex"><div class="col-3 content"><p>' +
@@ -296,17 +297,17 @@
             document.getElementById("demo").innerHTML +=
               "<tr>" +
               "<td>" +
-              (i + 1) +
+              rank +
               "</td>" +
               "<td>" +
               name +
               "</td>" +
               "<td>" +
-              email +
+              caid +
               "</td>" +
               "</td>" +
               "<td>" +
-              age +
+              totalpoints +
               "</td>" +
               "</tr>";
           }
