@@ -312,21 +312,21 @@
 
 <script
   type="text/javascript"
-  src="/assets/js/jquery-3.3.1.min.js"
+  src="./assets/js/jquery-3.3.1.min.js"
 ></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="/assets/js/popper.min.js"></script>
+<script type="text/javascript" src="./assets/js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+<script type="text/javascript" src="./assets/js/mdb.min.js"></script>
 
 <script type="text/javascript">
   $.getJSON(
     "https://spreadsheets.google.com/feeds/list/1ta5k6iW__P69uLKYWld6YXj-DEJUJzYY6gIUq0Ex5Ck/od6/public/values?alt=json",
     function (data) {
       var sheetData = data.feed.entry;
-
+      console.log(data)
       var i;
       for (i = 0; i < sheetData.length; i++) {
         var task_name = data.feed.entry[i]["gsx$taskname"]["$t"];
@@ -488,14 +488,14 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
     <script
       type="text/javascript"
-      src="/assets/js/jquery-3.3.1.min.js"
+      src="./assets/js/jquery-3.3.1.min.js"
     ></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+    <script type="text/javascript" src="./assets/js/mdb.min.js"></script>
 
     <script type="text/javascript">
       $.getJSON(
